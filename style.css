@@ -105,11 +105,6 @@ button:hover {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-button:focus {
-  outline: 2px solid var(--clr-soft-magenta);
-  outline-offset: 2px;
-}
-
 .social-icons-container {
   display: flex;
   margin-top: 11.25rem;
@@ -140,59 +135,7 @@ button:focus {
   transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
-.social-icon-border:focus {
-  outline: 2px solid var(--clr-soft-magenta);
-  outline-offset: 2px;
-}
-
-/* Accessibility: Respect user's motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  
-  /* Maintain focus visibility for reduced motion users */
-  button:focus,
-  .social-icon-border:focus {
-    outline: 2px solid var(--clr-soft-magenta);
-    outline-offset: 2px;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  button {
-    border: 2px solid var(--clr-violet);
-  }
-  
-  .social-icon-border {
-    border-width: 2px;
-  }
-}
-
-/* Keyboard navigation improvements */
-.social-icon-border:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--clr-soft-magenta);
-  outline-offset: 2px;
-}
-
-/* Ensure focus is visible even in reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .social-icon-border:focus,
-  button:focus {
-    outline: 2px solid var(--clr-soft-magenta);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
-  }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   body {
     background-image: url('./images/bg-mobile.svg');
     padding: 2rem;
