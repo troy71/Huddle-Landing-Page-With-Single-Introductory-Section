@@ -28,7 +28,7 @@ img{
   --fw-600: 600;
 
   --line-height-60: 3.75rem;  
-  --line-hright-36: 2.25rem;
+  --line-height-36: 2.25rem;
   --line-height-27: 1.6875rem;
 
 }
@@ -49,7 +49,7 @@ body {
 }
 
 header {
-  margin-top: 4rem;
+  margin-block-start: 4rem;
   margin-bottom: 3.125rem;
 }
 
@@ -67,6 +67,7 @@ p {
   color: var(--clr-white);
   font-family: var(--ff-open-sans);
   line-height: var(--line-height-27);
+  padding-top: 1.25rem;
 }
 
 .img {
@@ -84,9 +85,7 @@ section {
   margin-top: 2rem;
 }
 
-p {
-  padding-top: 1.25rem;
-}
+
 
 button {
   background-color: var(--clr-white);
@@ -103,6 +102,12 @@ button:hover {
   color: var(--clr-white);
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button:hover {
+    transition: none;
+  }
 }
 
 .social-icons-container {
@@ -133,6 +138,12 @@ button:hover {
   border: 1px solid var(--clr-soft-magenta);
   cursor: pointer;
   transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-icon-border:hover {
+    transition: none;
+  }
 }
 
 @media (max-width: 56.25rem) {
